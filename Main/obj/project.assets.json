@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/colomonos/Bureau/nouveau langage/C#/tuto/AppC/AppC.csproj",
-      "projectName": "AppC",
-      "projectPath": "/home/colomonos/Bureau/nouveau langage/C#/tuto/AppC/AppC.csproj",
+      "projectUniqueName": "/home/colomonos/Bureau/nouveau langage/C#/tuto/Main/Main.csproj",
+      "projectName": "Main",
+      "projectPath": "/home/colomonos/Bureau/nouveau langage/C#/tuto/Main/Main.csproj",
       "packagesPath": "/home/colomonos/.nuget/packages/",
-      "outputPath": "/home/colomonos/Bureau/nouveau langage/C#/tuto/AppC/obj/",
+      "outputPath": "/home/colomonos/Bureau/nouveau langage/C#/tuto/Main/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/colomonos/.nuget/NuGet/NuGet.Config"

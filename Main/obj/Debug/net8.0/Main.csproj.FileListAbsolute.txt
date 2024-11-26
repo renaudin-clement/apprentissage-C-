@@ -1,0 +1,15 @@
+/home/colomonos/Bureau/nouveau langage/C#/tuto/Main/bin/Debug/net8.0/Main
+/home/colomonos/Bureau/nouveau langage/C#/tuto/Main/bin/Debug/net8.0/Main.deps.json
+/home/colomonos/Bureau/nouveau langage/C#/tuto/Main/bin/Debug/net8.0/Main.runtimeconfig.json
+/home/colomonos/Bureau/nouveau langage/C#/tuto/Main/bin/Debug/net8.0/Main.dll
+/home/colomonos/Bureau/nouveau langage/C#/tuto/Main/bin/Debug/net8.0/Main.pdb
+/home/colomonos/Bureau/nouveau langage/C#/tuto/Main/obj/Debug/net8.0/Main.GeneratedMSBuildEditorConfig.editorconfig
+/home/colomonos/Bureau/nouveau langage/C#/tuto/Main/obj/Debug/net8.0/Main.AssemblyInfoInputs.cache
+/home/colomonos/Bureau/nouveau langage/C#/tuto/Main/obj/Debug/net8.0/Main.AssemblyInfo.cs
+/home/colomonos/Bureau/nouveau langage/C#/tuto/Main/obj/Debug/net8.0/Main.csproj.CoreCompileInputs.cache
+/home/colomonos/Bureau/nouveau langage/C#/tuto/Main/obj/Debug/net8.0/Main.sourcelink.json
+/home/colomonos/Bureau/nouveau langage/C#/tuto/Main/obj/Debug/net8.0/Main.dll
+/home/colomonos/Bureau/nouveau langage/C#/tuto/Main/obj/Debug/net8.0/refint/Main.dll
+/home/colomonos/Bureau/nouveau langage/C#/tuto/Main/obj/Debug/net8.0/Main.pdb
+/home/colomonos/Bureau/nouveau langage/C#/tuto/Main/obj/Debug/net8.0/Main.genruntimeconfig.cache
+/home/colomonos/Bureau/nouveau langage/C#/tuto/Main/obj/Debug/net8.0/ref/Main.dll

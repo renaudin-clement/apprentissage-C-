@@ -1,4 +1,4 @@
-﻿using Systhem;
+﻿using System;
 
     class Program
     {

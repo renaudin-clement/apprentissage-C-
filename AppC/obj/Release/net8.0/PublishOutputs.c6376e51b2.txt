@@ -1,0 +1,5 @@
+/home/colomonos/Bureau/nouveau langage/C#/tuto/AppC/bin/Release/net8.0/publish/AppC
+/home/colomonos/Bureau/nouveau langage/C#/tuto/AppC/bin/Release/net8.0/publish/AppC.dll
+/home/colomonos/Bureau/nouveau langage/C#/tuto/AppC/bin/Release/net8.0/publish/AppC.deps.json
+/home/colomonos/Bureau/nouveau langage/C#/tuto/AppC/bin/Release/net8.0/publish/AppC.runtimeconfig.json
+/home/colomonos/Bureau/nouveau langage/C#/tuto/AppC/bin/Release/net8.0/publish/AppC.pdb

@@ -14,3 +14,5 @@ dotnet new console --use-program-main -o Main
 
         bip ton terminal A VOIR POUR FAIRE UN SONG
         System.Console.Beep();
+
+        Console.Title = "JE_regarde_si_ca_marche";

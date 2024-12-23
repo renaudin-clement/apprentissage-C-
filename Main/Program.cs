@@ -10,10 +10,6 @@ class Program
 
         System.Console.WriteLine(" jefface lancien ");
         System.Console.WriteLine("je suis un texte qui passe a la ligne !");
-        System.Console.Clear();
-
-
-        System.Console.Beep();
 
         Console.Read();
 

@@ -17,7 +17,7 @@ dotnet new console --use-program-main -o Main
 
         Console.Title = "JE_regarde_si_ca_marche";
 
-//
+//   condition
 /*
 
 if ()
@@ -79,3 +79,6 @@ if ()
 opperateur ternaire 
 isMember ? '$2.00' : '$10.00';
 */
+
+// boule
+

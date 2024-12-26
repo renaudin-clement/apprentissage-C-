@@ -80,5 +80,11 @@ opperateur ternaire
 isMember ? '$2.00' : '$10.00';
 */
 
-// boule
+affiche en int la valeur de la premier touche taper touche
 
+        int c = Console.Read();
+        Console.WriteLine(c);
+
+        Console.WriteLine("ca marche");
+        ConsoleKeyInfo cki = Console.ReadKey();
+        Console.WriteLine(cki.Key);

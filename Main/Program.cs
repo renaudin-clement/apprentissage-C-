@@ -1,53 +1,61 @@
-﻿
-
-
-using System;
+﻿using System;
 
 namespace Main;
 
-abstract class Consumable
+interface Craftable
 {
-    
-    public void SellToMarchand() => Console.WriteLine("vendu !");
-
-    public abstract void rire();
-
+    public void SelldMarchant();
+    public void SelldArmure();
+    public void BuildMoustache();
 }
 
-class MagicLivre : Consumable
+abstract class Useable
 {
-    public override void rire()
+    public abstract void Utiliser();
+
+    public void crier()
     {
-         Console.WriteLine("litlitlit ! \n");
+        Console.WriteLine("hhhhhhaaaaaaa");
     }
 }
 
-class Ane : Consumable
+class Weapon : Craftable
 {
-    public override void rire()
-    {
-         Console.WriteLine("hyhyhyhy ! \n");
-    }
+    public void SelldMarchant() => Console.WriteLine("marchand darme a vendu");
+    public void SelldArmure() => Console.WriteLine("marchand a vendu une armure");
+    public void BuildMoustache() => Console.WriteLine("j\'ai creer une moustache");
 }
 
+class MagicBook : Useable,Craftable 
+{
+    public void SelldMarchant() => Console.WriteLine("marchand de livre a vendu");
+    public void SelldArmure() => Console.WriteLine("marchand de livre a vendu une armure");
+    public void BuildMoustache() => Console.WriteLine("j\'ai creer une moustache de livre");
 
+    public override  void Utiliser() => Console.WriteLine("j\'ai utiliser le livre");
+
+}
 
 class Program
 {
-
     
-    static void Main(string[] args)
+    public static void Main(string[] args)
     {
-        MagicLivre x = new MagicLivre();
-        Console.WriteLine("MagicLivre !");
-        x.SellToMarchand();
-        x.rire();
+        Weapon wep =new Weapon() ;
 
-        Ane l = new Ane();
-        Console.WriteLine("Ane !");
-        l.SellToMarchand();
-        l.rire();
-        
+
+        wep.SelldMarchant();
+        wep.SelldArmure();
+        wep.BuildMoustache();
+
+        MagicBook mb = new MagicBook();
+        mb.SelldMarchant();
+        mb.SelldArmure();
+        mb.BuildMoustache();
+
+        mb.crier();
+        mb.Utiliser();
+
 
     }
 }

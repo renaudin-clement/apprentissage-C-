@@ -2,38 +2,42 @@
 
 namespace Main;
 
-interface Craftable
+abstract class Figther
 {
-    public void SelldMarchant();
-    public void SelldArmure();
-    public void BuildMoustache();
-}
+    public abstract void Fight();
 
-abstract class Useable
-{
-    public abstract void Utiliser();
-
-    public void crier()
+    virtual public void Degat()
     {
-        Console.WriteLine("hhhhhhaaaaaaa");
+        Console.WriteLine("-10 pv");
     }
+
 }
 
-class Weapon : Craftable
+class Humain:Figther
 {
-    public void SelldMarchant() => Console.WriteLine("marchand darme a vendu");
-    public void SelldArmure() => Console.WriteLine("marchand a vendu une armure");
-    public void BuildMoustache() => Console.WriteLine("j\'ai creer une moustache");
+    public override void Fight()
+    {
+        
+        Console.WriteLine("pour l'Alliance");
+    }
+
+    public override void Degat()
+    {   
+        //base.Degat(); possible si vous voulez rajouter le code precedent
+        Console.WriteLine(" -5 pv");
+    }
+
 }
 
-class MagicBook : Useable,Craftable 
+class Orc :Figther
 {
-    public void SelldMarchant() => Console.WriteLine("marchand de livre a vendu");
-    public void SelldArmure() => Console.WriteLine("marchand de livre a vendu une armure");
-    public void BuildMoustache() => Console.WriteLine("j\'ai creer une moustache de livre");
+    public override void Fight()
+    {
+        Console.WriteLine("pour l'ordre");
+    }
 
-    public override  void Utiliser() => Console.WriteLine("j\'ai utiliser le livre");
-
+   
+    
 }
 
 class Program
@@ -41,20 +45,42 @@ class Program
     
     public static void Main(string[] args)
     {
-        Weapon wep =new Weapon() ;
+
+        
+        Humain H1 = new Humain();
+        Humain H2 = new Humain();
+
+        Humain[] ArmyHumain = new Humain[] {H1,H2};
+        Console.WriteLine("armer de Humain");
+        foreach (var human in ArmyHumain)
+            {
+            human.Fight();
+            human.Degat();
+            }
+
+        Orc O1 = new Orc();
+        Orc O2 = new Orc();
 
 
-        wep.SelldMarchant();
-        wep.SelldArmure();
-        wep.BuildMoustache();
+        Orc[] armerorck = new Orc[] {O1,O2};
+        Console.WriteLine("");
+        Console.WriteLine("armer de ORC");
+        foreach (var orck in armerorck)
+            {
+            orck.Fight();
+            orck.Degat();
+            }
 
-        MagicBook mb = new MagicBook();
-        mb.SelldMarchant();
-        mb.SelldArmure();
-        mb.BuildMoustache();
 
-        mb.crier();
-        mb.Utiliser();
+        Figther[] combatant = new Figther[] {H1,H2,O1,O2};
+
+        Console.WriteLine("");
+        Console.WriteLine("armer de combatant");
+        foreach (var combatante in combatant)
+            {
+            combatante.Fight();
+            combatante.Degat();
+            }
 
 
     }

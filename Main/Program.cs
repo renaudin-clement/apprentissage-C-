@@ -5,29 +5,46 @@ using System;
 namespace Main;
 
 //parent
-class Widge
-    {
-        //ne pas oublier dutiliser protected mais elle est que pour les classe deriver pas pour elle meme
-        public String Titre {get;set;} ="default" ;
+class Armure  
+{
 
-        public Widge(String title) => this.Titre = title ;
+        public int Defense {get;set;} = 3 ;
+        
+        public int Durabiliter {get;set;} = 20 ;
 
-        //VIRTUAL  autorise la derivation en override en gros ca permet de dire tu peux override cette methode
-        public virtual void Test() => Console.WriteLine("Widge test");
-    }
-
-//boutton enfant de Widge
-class Boutton : Widge
-    {
-        public int Color {get;set;}  =0;
-
-        public Boutton(String title,int Color) : base(title)
-        {
-            this.Color = Color ;
+        public Armure(int Defense,int Durabiliter){
+        this.Defense = Defense;
+        this.Durabiliter = Durabiliter;
         }
 
-        public override void Test() => Console.WriteLine("Boutton test");
+        public static Armure operator +(Armure a,Armure b)
+        {
+            return new Armure(a.Defense + b.Defense , a.Durabiliter+b.Durabiliter);
+        }
+
+        public static bool operator true(Armure a) => a.Durabiliter >=1;
+
+        public static bool operator false(Armure a) => a.Durabiliter <=0;
+
+
+
+        public override String ToString(){
+            if (this.Durabiliter >20)
+            {
+                return "armure forte";
+            }
+            else if (this.Durabiliter < 20 && this.Durabiliter > 0)
+            {
+                return "armure faible";
+            }
+            else 
+            {
+                return "armure casser";
+            }
+             
+        }
     }
+
 
 class Program
 {
@@ -35,22 +52,51 @@ class Program
     
     static void Main(string[] args)
     {
-       Widge a = new Widge("programme C#");
-       Console.WriteLine(a.Titre);
-       a.Test();
+        Armure arm1 = new Armure(18,22);
+        Console.WriteLine(arm1);
+        Console.WriteLine($"DEF {arm1.Defense} DUR {arm1.Durabiliter}");
 
-       Boutton but = new Boutton("progatron",18);
-       Console.WriteLine(but.Titre);
-       Console.WriteLine(but.Color);
-       but.Test();
+        if (arm1){
+            Console.WriteLine("armure en utilisable"+"\n");
+        }
+        else{
+            Console.WriteLine("armure casser"+"\n");
+        }
+
+
+        Armure arm2 = new Armure(2,18);
+        Console.WriteLine(arm2);
+        Console.WriteLine($"DEF {arm2.Defense} DUR {arm2.Durabiliter}");
+
+        if (arm2){
+            Console.WriteLine("armure en utilisable"+"\n");
+        }
+        else{
+            Console.WriteLine("armure casser"+"\n");
+        }
+
+        Armure armultra = arm1 + arm2;
+        Console.WriteLine(armultra);
+        Console.WriteLine($"DEF {armultra.Defense} DUR {armultra.Durabiliter}");
+
+        if (armultra){
+            Console.WriteLine("armure en utilisable"+"\n");
+        }
+        else{
+            Console.WriteLine("armure casser"+"\n");
+        }
+
+        Armure casser = new Armure(55,0);
+        Console.WriteLine(casser);
+        Console.WriteLine($"DEF {casser.Defense} DUR {casser.Durabiliter}");
+
+        if (casser){
+            Console.WriteLine("armure en utilisable"+"\n");
+        }
+        else{
+            Console.WriteLine("armure casser"+"\n");
+        }
+
+
     }
 }
-
-
-/*
-sealed class ClassFini{
-    public String Titre {get;set;} ="default" ;
-
-        public Widge(String title) => this.Titre = title ;
-}
-*/
